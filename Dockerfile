@@ -1,10 +1,12 @@
-FROM ibmjava-alpine
+FROM openjdk:12-alpine
 
 #COPY hi.jar /hi.jar
 
 
 
-RUN apk add git \
+RUN apk add maven \
+
+	&& apk add git \
 
 	&& git clone https://github.com/timatisoft/docker.git \
 
